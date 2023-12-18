@@ -30,12 +30,12 @@ function RegisterForm() {
     }
 
     return (
-        <form aria-label='form' onSubmit={handleSubmit}>
+        <form aria-label='form' onSubmit={handleSubmit} id="register-form">
              {errorMessage && (
                 <p className="error"> {errorMessage} </p>
             )}
             <label htmlFor='Username'>Username</label>
-            <input aria-label="Username" name="username" type='text' onChange={updateUsername} />
+            <input aria-label="Username" name="username" type='text' onChange={updateUsername} className="input" />
             <label htmlFor='Password'>Password</label>
             <input aria-label='Password' name="password" type='password' onChange={updatePassword} />
             <input role='submit' className='submit' type='submit' value='REGISTER' />

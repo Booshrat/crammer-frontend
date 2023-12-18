@@ -7,7 +7,8 @@ const Homepage = () => {
 
     return (
         <div>
-            <h2>Homepage</h2>
+            <img className="home-image" src="src/assets/home-image.png" alt="home-image" />
+            <br />
             <button onClick={() => { goTo('/login') }}> LOGIN </button>
             <button onClick={() => { goTo('/register') }}> REGISTER </button>
         </div>

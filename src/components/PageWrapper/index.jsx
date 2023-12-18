@@ -15,7 +15,31 @@ const PageWrapper = () => {
             </nav>
         </header>
         <Outlet />
-        <footer id="crammer-footer">Copyright 2023 @ Crammer Education </footer>
+        <footer id="crammer-footer">
+            <div className='icon-container'>
+                <a href="">
+                    <img className='footer-icon' src="src/assets/instagram.png" alt="instagram-icon" />
+                </a>
+                <a href="">
+                    <img className='footer-icon' src="src/assets/facebook.png" alt="instagram-icon" />
+                </a>
+                <a href="">
+                    <img className='footer-icon' src="src/assets/twitter.png" alt="instagram-icon" />
+                </a>
+                <a href="">
+                    <img className='footer-icon' src="src/assets/youtube.png" alt="instagram-icon" />
+                </a>
+            </div>
+            <div className='link-container'>
+                <span>Contact Us</span>
+                <span>Privacy</span>
+                <span>Cookies</span>
+                <span>Sitemap</span>
+            </div>
+            <div>
+                <p>Copyright 2023 @ Crammer Education</p>
+            </div>
+        </footer>
     </>
 };
 

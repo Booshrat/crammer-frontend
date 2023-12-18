@@ -1,8 +1,21 @@
-import React from 'react'
+import React from 'react';
+import * as Pages from './pages'
+import { Routes, Route } from 'react-router-dom';
+import * as Components from "./components"
+import "./App.css"
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
+    <main>
+      <Routes>
+        <Route path='/' element={<Components.PageWrapper />}>
+          <Route index element={<Pages.Homepage />} />
+          <Route path='/login' element={<Pages.Login />} />
+          <Route path='/register' element={<Pages.Register />} />
+          <Route path='/welcome' element={<Pages.Welcome />} />
+        </Route>
+      </Routes>
+    </main>
   )
 }
 

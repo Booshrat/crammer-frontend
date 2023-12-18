@@ -1,35 +1,55 @@
+* {
+  margin:0;
+  padding:0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.active {
-  text-decoration: underline;
-  color: #ffffff;
-  background-color: #0000FF;
-  height:100px;
+/* navbar */
+#logo {
+  margin-right:10px;
+  width:150px;
 }
 
 #crammer-navbar {
   background-color: #fff;
-  padding: 10px;
-  height:100px;
-  box-shadow: 0px 0px 5px 0px #181818;
-  
+  height:75px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 5px #0000FF solid;
+  margin:auto;
+  width:100%;
+  margin-bottom: 20px;
 }
 
 .nav-link {
   text-decoration: none;
   color: #181818;
-  margin-right: 35px;
-  font-weight: bold;
-  height:100px;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-weight: bold;  
+  width:fit-content;
+  border-radius: 0 0 8px 8px; 
+	padding:20px 15px;
+  font-size: 25px;
 }
 
+.active {
+  color: #ffffff;
+  background-color: #0000FF;  
+  border-radius: 0 0 8px 8px; 
+  border: solid 5px #0000FF;
+  box-shadow: 0 4px 4px 0px rgba(28, 2, 143, 0.35);
+}
 
-
+/* footer */
 #crammer-footer {
   background-color: #333;
   color: #fff;
@@ -38,8 +58,28 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  height:50px;
 }
 
-#logo {
-  margin-right:40px;
+/* Homepage */
+.home-image {
+  width: 100%;
+}
+
+button {
+  background-color: #3D3FFF;
+  color: #EEEFF2;
+}
+
+/* Register Page */
+#register-form{
+  width:40%;
+}
+
+.input {
+  width:70%;
+  padding:15px;
+  margin-bottom:10px;
+  border-radius:5px;
+  border: 1px solid black; 
 }

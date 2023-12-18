@@ -3,15 +3,14 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 const PageWrapper = () => {
     return <>
-        <header id="crammer-header">
-            
+        <header id="crammer-header">           
              <nav id="crammer-navbar">
-             <img id="logo" src="../assets/crammer.png" />
+             <img src="src/assets/crammer.png" id="logo"/>
                 <NavLink to="/" className="nav-link">Home</NavLink>
                 <NavLink to="/flashcard" className="nav-link">FlashCards</NavLink>
                 <NavLink to="/quiz" className="nav-link">Quizzes</NavLink>
                 <NavLink to="/leaderboard" className="nav-link">Leaderboard</NavLink>
-                <NavLink to="/register" className="nav-link">Register</NavLink>
+                <NavLink to="/register" className="nav-link" id="register-nav">Register</NavLink>
                 <NavLink to="/login" className="nav-link">Login</NavLink>
             </nav>
         </header>

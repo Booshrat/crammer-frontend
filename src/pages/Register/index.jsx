@@ -8,11 +8,13 @@ const Register = () =>  {
     }, [])
 
     return (
-    <section>
+    <section id="register-page">
     <h1>Register</h1>
 
-    <RegisterForm />
     <BackButton />
+
+    <RegisterForm />
+    
     </section>
     )
 

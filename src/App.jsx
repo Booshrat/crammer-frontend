@@ -6,14 +6,16 @@ function App() {
   return (
     <main>
       <Routes>
-        <Route path='/' element={<Pages.Homepage />}>
-        </Route>
-        <Route path='/login' element={<Pages.Login />}>
-        </Route>
-        <Route path='/register' element={<Pages.Register />}>
-        </Route>
-        <Route path='/welcome' element={<Pages.Welcome />}>
-        </Route>
+        <Route path='/' element={<Pages.Homepage />} />
+
+        <Route path='/login' element={<Pages.Login />} />
+
+        <Route path='/register' element={<Pages.Register />} />
+
+        <Route path='/flashcard' element={<Pages.FlashCard />} />
+
+        <Route path='/welcome' element={<Pages.Welcome />} />
+
       </Routes>
     </main>
   )

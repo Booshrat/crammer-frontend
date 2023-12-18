@@ -9,11 +9,14 @@
   text-decoration: underline;
   color: #ffffff;
   background-color: #0000FF;
+  height:100px;
 }
 
 #crammer-navbar {
   background-color: #fff;
   padding: 10px;
+  height:100px;
+  box-shadow: 0px 0px 5px 0px #181818;
   
 }
 
@@ -22,6 +25,7 @@
   color: #181818;
   margin-right: 35px;
   font-weight: bold;
+  height:100px;
 }
 
 

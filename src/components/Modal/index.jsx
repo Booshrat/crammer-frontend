@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./modal.css";
+import axios from 'axios';
 
-function Modal({ addFlashcard }) {
+function Modal({setFlashcards}) {
   const [modal, setModal] = useState(false);
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
@@ -11,9 +12,28 @@ function Modal({ addFlashcard }) {
     setModal(!modal);
   };
 
-  const handleSave = (e) => {
+
+  const handleSave = async (e) => {
     e.preventDefault();
-    addFlashcard({ question, answer });
+
+    const storedToken = localStorage.getItem('token');
+    const token = storedToken ? storedToken.split(' ')[1] : '';
+
+    const response = await axios.post('http://localhost:3000/flashcard', { question, answer }, {
+        headers: {
+          Authorization: `${token}`
+        }
+      });
+
+      try {
+          const response = await axios.get('http://localhost:3000/flashcard', {
+              headers: { Authorization: `${token}`}
+          });
+          setFlashcards(response.data);
+          } catch (error) {
+          console.error('Error fetching flashcards:', error);
+      }
+
     setQuestion("");
     setAnswer("");
 
@@ -22,7 +42,7 @@ function Modal({ addFlashcard }) {
     setTimeout(() => {
         setShowAddedMessage(false);
         setModal(false);  
-      }, 3000); 
+      }, 750); 
   };
 
   return (
@@ -43,18 +63,18 @@ function Modal({ addFlashcard }) {
             <h2 style={{ textAlign: "center" }}>Add Flashcard</h2>
             <p>
               <form onSubmit={handleSave}>
-                <label for="question">Question:</label>
+                <label htmlFor="question">Question:</label>
                 <textarea
-                  class="input"
+                  className="input"
                   id="question"
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="Type the question here.."
                   rows="2"
                 ></textarea>
-                <label for="answer">Answer:</label>
+                <label htmlFor="answer">Answer:</label>
                 <textarea
-                  class="input"
+                  className="input"
                   id="answer"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}

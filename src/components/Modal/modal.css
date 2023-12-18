@@ -74,17 +74,43 @@ label {
     padding: 0.6em 0;
     border-radius: 0.3em;
     font-weight: 600;
-    width: 100%; /* Adjusts the width to fit the content */
-    text-align: center; /* Centers the text inside the button */
+    width: 100%; 
+    text-align: center; 
   }
 
  
   .flashcard-added-message {
-    background-color: #28a745; /* Green background */
+    background-color: #28a745; 
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
   }
+
+  .btn-modal {
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1em; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    outline: none; 
+}
+
+.btn-modal:hover, .btn-modal:focus {
+    background-color: #45a049; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+.btn-modal:active {
+    transform: translateY(-1px); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+}
+
 

@@ -1,5 +1,6 @@
 .flashcard-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -8,7 +9,7 @@
     font-size: 1em;
     padding: 10px 20px;
     margin: 0 10px;
-    background-color: #587ef4; /* Blue background */
+    background-color: #587ef4; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -17,7 +18,7 @@
   }
   
   .flashcard-container button:hover {
-    background-color: #405cb4; /* Darker blue on hover */
+    background-color: #405cb4;
   }
 
 .flip-card {
@@ -60,3 +61,27 @@
     transform: rotateY(180deg);
   }
 
+  .delete-success-message {
+    color: white;
+    background-color: lightcoral;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease;
+    position: fixed; 
+    top: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    width: auto; 
+    max-width: 90%; 
+}
+
+.flashcard-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px; 
+}

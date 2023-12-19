@@ -15,7 +15,7 @@ function RegisterForm() {
         setErrorMessage('')
         await registerFunction(e);
         await loginFunction(e);
-        if(localStorage.length){goTo('/welcome')}
+        if(localStorage.length){goTo('/flashcard')}
         else { setErrorMessage('User already exists!') }        
     }
 

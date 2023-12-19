@@ -34,9 +34,9 @@ function LoginForm() {
                 <p className="error"> {errorMessage} </p>
             )}
             <label htmlFor='Username'>Username</label>
-            <input className="input" aria-label="Username" name="username" type='text' onChange={updateUsername} placeholder="username" />
+            <input className="input" aria-label="Username" name="username" type='text' onChange={updateUsername} placeholder="username" role="username" />
             <label htmlFor='Password'>Password</label>
-            <input aria-label='Password' className="input" name="password" type='password' onChange={updatePassword} placeholder="password" />
+            <input aria-label='Password' className="input" name="password" type='password' onChange={updatePassword} placeholder="password" role="password" />
             <input role='submit' className='signup-btn' type='submit' value='LOGIN' />
             <p className='clickable' onClick={() => goTo('/register')}>Don't have an account yet? Register here!</p>
         </form>

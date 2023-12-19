@@ -4,7 +4,7 @@
 }
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -43,24 +43,39 @@
 
 .active {
   color: #ffffff;
-   
-  border-radius: 0 0 8px 8px; 
-  
+  border-radius: 0 0 8px 8px;   
   box-shadow: 0 4px 4px 0px rgba(28, 2, 143, 0.35);
   background: linear-gradient(to bottom, #0000FF, #6464f4)
 }
 
 /* footer */
 #crammer-footer {
-  background-color: #333;
-  color: #fff;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  padding: 1rem;
   bottom: 0;
   width: 89.45%;
   height:50px;
-  margin:auto;
+  margin-bottom: 3rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.footer-icon {
+  width: 2rem;
 }
 
 /* Homepage */
@@ -89,6 +104,10 @@ h1 {
 
 .btn-container {
   display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 2rem 0;
+  font-weight: bold;
 }
 
 .login-btn, .signup-btn {
@@ -102,16 +121,19 @@ h1 {
   border-radius: 1rem;
   font-size: 1.2rem;
 }
-  
-  
-  .signup-btn:hover{
-
-  background-color: #0b0ea2
+    
+.signup-btn:hover{
+  background-color: #0b0ea2;
+  cursor: pointer;
 }
 
 .login-btn:hover{
-  background-color: #0b0ea2
+  background-color: #0b0ea2;
+  cursor: pointer;
+}
 
+.or-text {
+  margin: 0 1rem;
 }
 
 /* Register Page */

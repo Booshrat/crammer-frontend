@@ -6,10 +6,16 @@ const Homepage = () => {
     const goTo = useNavigate();
 
     return (
-        <div>
-            <h2>Homepage</h2>
-            <button onClick={() => { goTo('/login') }}> LOGIN </button>
-            <button onClick={() => { goTo('/register') }}> REGISTER </button>
+        <div className="home-container">
+            <img className="home-image" src="src/assets/home-image.png" alt="home-image" />
+            <div className="overlay">
+                <h1>Welcome to Our Website.</h1>
+                <div className='btn-container'>
+                    <button role="login-button" className="login-btn" onClick={() => { goTo('/login') }}>Login</button>
+                    <span className="or-text">or</span>        
+                    <button role="signup-button" className="signup-btn" onClick={() => { goTo('/register') }}>Signup</button>
+                </div>
+            </div>
         </div>
     )
 }

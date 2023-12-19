@@ -8,11 +8,13 @@ const Login = () => {
     }, [])
     
     return (
-    <section>
+    <section id="register-page">
     <h1>Login</h1>
 
-    <LoginForm />
     <BackButton />
+
+    <LoginForm />
+    
     </section>
     )
 }

@@ -4,7 +4,7 @@
 }
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -37,49 +37,179 @@
   font-weight: bold;  
   width:fit-content;
   border-radius: 0 0 8px 8px; 
-	padding:20px 15px;
+	padding:25px 15px;
   font-size: 25px;
 }
 
 .active {
   color: #ffffff;
-  background-color: #0000FF;  
-  border-radius: 0 0 8px 8px; 
-  border: solid 5px #0000FF;
+  border-radius: 0 0 8px 8px;   
   box-shadow: 0 4px 4px 0px rgba(28, 2, 143, 0.35);
+  background: linear-gradient(to bottom, #0000FF, #6464f4)
 }
 
 /* footer */
 #crammer-footer {
-  background-color: #333;
-  color: #fff;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  padding: 1rem;
   bottom: 0;
-  width: 100%;
+  width: 89.45%;
   height:50px;
+  margin-bottom: 3rem;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+  margin: 1rem auto;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+.footer-icon {
+  width: 2rem;
 }
 
 /* Homepage */
+.home-container {
+  position: relative;
+  width: 100%;
+}
+
 .home-image {
   width: 100%;
 }
 
-button {
-  background-color: #3D3FFF;
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  width: 40%;
   color: #EEEFF2;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 2rem 0;
+  font-weight: bold;
+}
+
+.login-btn, .signup-btn {
+  background-color: #3D3FFF;
+  color: #EEEFF2;
+  /* margin: 1rem;
+  margin-left: 0; */
+  padding: 1rem;
+  width: 8rem;
+  border-width: 0;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+    
+.signup-btn:hover{
+  background-color: #0b0ea2;
+  cursor: pointer;
+}
+
+.login-btn:hover{
+  background-color: #0b0ea2;
+  cursor: pointer;
+}
+
+.or-text {
+  margin: 0 1rem;
+}
+
 /* Register Page */
+
+#register-page{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #register-form{
   width:40%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+  border-radius:10px;
+  box-shadow:  0 0 10px 2px rgba(0, 0, 255, 0.75);
+  margin-bottom:70px;
+  padding: 50px;
+  margin-top: 35px;
+  
 }
 
 .input {
-  width:70%;
-  padding:15px;
-  margin-bottom:10px;
-  border-radius:5px;
-  border: 1px solid black; 
+  width:50%;
+  border-radius:15px;
+  border: 0.4px solid darkslategrey;
+  margin-bottom: 25px;
+  padding:10px;
+  
 }
+
+.clickable{
+  background-color: #3D3FFF;
+  color: #EEEFF2;
+  margin: 1rem;
+  margin-left: 0;
+  padding: 1rem;
+  width: 28rem;
+  border-width: 0;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight:
+bold;
+}
+
+.clickable:hover{
+  background-color: #0b0ea2
+
+}
+
+.back-btn{
+  background-color: #9192f4;
+  color: #EEEFF2;
+  margin: 1rem;
+  margin-left: 0;
+  padding: 1rem;
+  width: 28rem;
+  border-width: 0;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight:
+bold
+
+}
+
+.back-btn:hover{
+  background-color: #5659f4;
+
+}
+
+
+
+
+
+

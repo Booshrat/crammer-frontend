@@ -12,6 +12,7 @@ function App() {
         <Route path='/login' element={<Pages.Login />} />
         <Route path='/register' element={<Pages.Register />} />
         <Route path='/flashcard' element={<Pages.FlashCard />} />
+        <Route path='/quiz' element={<Pages.QuizPage />} />
         <Route path='/welcome' element={<Pages.Welcome />} />
       </Routes>
     </main>

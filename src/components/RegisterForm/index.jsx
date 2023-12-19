@@ -35,9 +35,9 @@ function RegisterForm() {
                 <p className="error"> {errorMessage} </p>
             )}
             <label htmlFor='Username'>Username</label>
-            <input aria-label="Username" name="username" type='text' onChange={updateUsername} placeholder="example username" className="input" />
+            <input aria-label="Username" name="username" type='text' onChange={updateUsername} placeholder="example username" className="input" role="username"/>
             <label htmlFor='Password'>Password</label>
-            <input aria-label='Password' name="password" type='password' onChange={updatePassword}  className="input" placeholder="example password"/>
+            <input aria-label='Password' name="password" type='password' onChange={updatePassword}  className="input" placeholder="example password" role="password"/>
             <input role='submit' type='submit' value='REGISTER' className="signup-btn" />
             <p role='text' className="clickable" onClick={() => goTo('/login')}>Already have an account? Click here to login!</p>
             </form>

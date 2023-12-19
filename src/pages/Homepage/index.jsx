@@ -11,10 +11,9 @@ const Homepage = () => {
             <div className="overlay">
                 <h1>Welcome to Our Website.</h1>
                 <div className='btn-container'>
-                    <button className="login-btn" onClick={() => { goTo('/login') }}>Login</button>
-                    <span className="or-text">  or  </span>
-                
-                    <button className="signup-btn" onClick={() => { goTo('/register') }}>Signup</button>
+                    <button role="login-button" className="login-btn" onClick={() => { goTo('/login') }}>Login</button>
+                    <span className="or-text">or</span>        
+                    <button role="signup-button" className="signup-btn" onClick={() => { goTo('/register') }}>Signup</button>
                 </div>
             </div>
         </div>

@@ -48,15 +48,6 @@ const QuizCard = ({ question, handleOptionClick }) => {
 };
 
 
-const AnswerOption = ({ option, handleOptionClick }) => {
-  return (
-    <li>
-      <button className="answer-button" onClick={handleOptionClick}>
-        {option}
-      </button>
-    </li>
-  );
-};
 
 export default QuizCard;
 

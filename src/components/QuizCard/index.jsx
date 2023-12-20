@@ -20,7 +20,7 @@ const QuizCard = ({ question, handleOptionClick }) => {
   }, [question, handleOptionClick]);
 
   if (!question || !question.incorrectAnswers || !Array.isArray(question.incorrectAnswers)) {
-    return <p>Loading...</p>;
+    return <p role="loading">Loading...</p>;
   }
 
   const { text, category, correctAnswer, incorrectAnswers } = question;
@@ -30,7 +30,7 @@ const QuizCard = ({ question, handleOptionClick }) => {
     <div className="quiz-card-container">
       <div className="question-box">
         <h3>{text}</h3>
-        <p>Category: {category}</p>
+        <p role="category">Category: {category}</p>
       </div>
       <div className="quiz-card-content">
         <ul className="answer-options">
@@ -47,4 +47,16 @@ const QuizCard = ({ question, handleOptionClick }) => {
   );
 };
 
+
+const AnswerOption = ({ option, handleOptionClick }) => {
+  return (
+    <li>
+      <button className="answer-button" onClick={handleOptionClick}>
+        {option}
+      </button>
+    </li>
+  );
+};
+
 export default QuizCard;
+

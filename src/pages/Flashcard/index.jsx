@@ -23,7 +23,7 @@ const FlashCard = () => {
         const fetchFlashcards = async () => {
             const token = storedToken.split(' ')[1]
             try {
-                const response = await axios.get('http://localhost:3000/flashcard', {
+                const response = await axios.get('https://reddy-34-xnzz.onrender.com/flashcard', {
                     headers: { Authorization: `${token}`}
                 });
                 setFlashcards(response.data);
@@ -70,7 +70,7 @@ const FlashCard = () => {
     const deleteFlashcard = async (flashcardId) => {
         const token = storedToken.split(' ')[1]
         try {
-            await axios.delete(`http://localhost:3000/flashcard/${flashcardId}`, {
+            await axios.delete(`https://reddy-34-xnzz.onrender.com/flashcard/${flashcardId}`, {
                 headers: { Authorization: `${token}` }
             });
 

@@ -1,3 +1,13 @@
+.flashcard-page {
+  background-color: #f3c380;
+  height: 100rem;
+  position: fixed;
+}
+
+h1{
+  margin-top: 10rem;
+}
+
 .flashcard-container {
     display: flex;
     flex-direction: column;
@@ -7,26 +17,31 @@
   
   .flashcard-container button {
     font-size: 1em;
-    padding: 10px 20px;
-    margin: 0 10px;
-    background-color: #587ef4; 
-    color: white;
-    border: none;
+    font-weight: bold;
+    padding: .6rem .8rem;
+    margin: 2rem 1rem;
+    /* background-color: #587ef4;  */
+    color: #5A9499;
+    border: 2px solid #5A9499;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 7.5rem;
   }
   
   .flashcard-container button:hover {
-    background-color: #405cb4;
+    background-color: #cedfe0;
+    transform: translateY(-1.5px); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
   }
 
 .flip-card {
     background-color: transparent;
-    width: 400px;
-    height: 250px;
+    width: 40rem;
+    height: 20rem;
     border: 1px solid #f1f1f1;
     perspective: 1000px; 
+    
   }
   
   .flip-card-inner {
@@ -36,6 +51,7 @@
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    box-shadow:  0 0 .5rem #5A9499;
   }
   
   .flip-card:hover .flip-card-inner {
@@ -56,7 +72,7 @@
   }
   
   .flip-card-back {
-    background-color: dodgerblue;
+    background-color: #5A9499;
     color: white;
     transform: rotateY(180deg);
   }

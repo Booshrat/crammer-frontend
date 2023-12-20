@@ -62,19 +62,22 @@ function Modal({setFlashcards}) {
             )}
             <h2 style={{ textAlign: "center" }}>Add Flashcard</h2>
             <p>
-              <form onSubmit={handleSave}>
+              <form onSubmit={handleSave} className="modal-form">
                 <label htmlFor="question">Question:</label>
+                <br/>
                 <textarea
-                  className="input"
+                  className="modal-input"
                   id="question"
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="Type the question here.."
                   rows="2"
                 ></textarea>
+                <br />
                 <label htmlFor="answer">Answer:</label>
+                <br/>
                 <textarea
-                  className="input"
+                  className="modal-input"
                   id="answer"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}

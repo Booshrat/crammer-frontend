@@ -48,6 +48,9 @@ const QuizPage = () => {
     if (isCorrect) {
       setScore((prevScore) => prevScore + 1);
       fetchRandomQuestion();
+    } else {
+      // If the selected option is incorrect, fetch a new question without updating the score
+      fetchRandomQuestion();
     }
   };
 
@@ -55,7 +58,7 @@ const QuizPage = () => {
     <div>
       <h1>Quiz Page</h1>
       <p>Score: {score}</p>
-      {question && <QuizCard question={question} handleOptionClick={handleOptionClick} />}
+      {question && <QuizCard question={question} handleOptionClick={handleOptionClick} score={score} />}
     </div>
   );
 };

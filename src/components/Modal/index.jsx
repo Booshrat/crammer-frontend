@@ -19,14 +19,14 @@ function Modal({setFlashcards}) {
     const storedToken = localStorage.getItem('token');
     const token = storedToken ? storedToken.split(' ')[1] : '';
 
-    const response = await axios.post('http://localhost:3000/flashcard', { question, answer }, {
+    const response = await axios.post('https://reddy-34-xnzz.onrender.com/flashcard', { question, answer }, {
         headers: {
           Authorization: `${token}`
         }
       });
 
       try {
-          const response = await axios.get('http://localhost:3000/flashcard', {
+          const response = await axios.get('https://reddy-34-xnzz.onrender.com/flashcard', {
               headers: { Authorization: `${token}`}
           });
           setFlashcards(response.data);

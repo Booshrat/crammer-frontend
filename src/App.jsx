@@ -15,6 +15,7 @@ function App() {
           <Route path='/flashcard' element={<Pages.FlashCard />} />
           <Route path= '/quiz' element={<Pages.QuizPage />} />
           <Route path='/welcome' element={<Pages.Welcome />} />
+          <Route path="/quiz" element={<Pages.QuizPage />} />
           </Route>
       </Routes>
     </main>

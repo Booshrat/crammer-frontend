@@ -6,9 +6,10 @@
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
 }
 
 /* navbar */
@@ -37,8 +38,8 @@
   font-weight: bold;  
   width:fit-content;
   border-radius: 0 0 8px 8px; 
-	padding:25px 15px;
-  font-size: 25px;
+	padding:27px 15px;
+  font-size: 20px;
 }
 
 .active {
@@ -94,8 +95,12 @@
   left: 30%;
   transform: translate(-50%, -50%);
   text-align: left;
-  width: 40%;
+  width: 45%;
   color: #EEEFF2;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
 }
 
 h1 {
@@ -104,9 +109,11 @@ h1 {
 
 .btn-container {
   display: flex;
+  justify-content: center;
   align-items: center;
   width: 70%;
   margin: 2rem 0;
+  margin-right: 18rem;
   font-weight: bold;
 }
 

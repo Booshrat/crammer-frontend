@@ -55,7 +55,7 @@ function Modal({setFlashcards}) {
 
       {modal && (
         <div className="modal">
-          <div onClick={toggleModal} className="overlay"></div>
+          <div onClick={toggleModal} className="modaloverlay"></div>
           <div className="modal-content">
             {showAddedMessage && (
                     <div className="flashcard-added-message">Flashcard added</div>

@@ -121,7 +121,7 @@ const FlashCard = () => {
                         </div>
                     </>
                 ) : (
-                    <h2>No Flashcards Created!</h2>
+                    <h2 role="notify">No Flashcards Created!</h2>
                 )}
                 {showDeleteSuccess && <div className="delete-success-message">Successfully deleted</div>}
             </div>

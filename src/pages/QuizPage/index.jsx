@@ -3,34 +3,34 @@ import QuizCard from '../../components/QuizCard';
 
 const QuizPage = () => {
   const [question, setQuestion] = useState(null);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
-    const fetchRandomQuestion = async () => {
-      try {
-        const response = await fetch('https://the-trivia-api.com/v2/questions/');
-        const data = await response.json();
-
-        // Assuming data is an array of questions
-        const randomQuestion = getRandomQuestion(data);
-
-        // Check if the question is valid before setting it
-        if (randomQuestion && randomQuestion.question && randomQuestion.incorrectAnswers) {
-          setQuestion({
-            text: randomQuestion.question.text,
-            category: randomQuestion.category,
-            correctAnswer: randomQuestion.correctAnswer,
-            incorrectAnswers: randomQuestion.incorrectAnswers,
-          });
-        } else {
-          console.error('Invalid question data:', randomQuestion);
-        }
-      } catch (error) {
-        console.error('Error fetching question:', error);
-      }
-    };
-
     fetchRandomQuestion();
   }, []);
+
+  const fetchRandomQuestion = async () => {
+    try {
+      const response = await fetch('https://the-trivia-api.com/v2/questions/');
+      const data = await response.json();
+
+      const randomQuestion = getRandomQuestion(data);
+
+      // Check if the question is valid before setting it
+      if (randomQuestion && randomQuestion.question && randomQuestion.incorrectAnswers) {
+        setQuestion({
+          text: randomQuestion.question.text,
+          category: randomQuestion.category,
+          correctAnswer: randomQuestion.correctAnswer,
+          incorrectAnswers: randomQuestion.incorrectAnswers,
+        });
+      } else {
+        console.error('Invalid question data:', randomQuestion);
+      }
+    } catch (error) {
+      console.error('Error fetching question:', error);
+    }
+  };
 
   const getRandomQuestion = (questions) => {
     if (questions && questions.length > 0) {
@@ -41,13 +41,20 @@ const QuizPage = () => {
   };
 
   const handleOptionClick = (selectedOption) => {
-    // Handle the selected option
-    console.log('Selected Option:', selectedOption);
+    // Check if the selected option is correct
+    const isCorrect = question.correctAnswer === selectedOption;
+
+    // If the selected option is correct, update the score and fetch a new question
+    if (isCorrect) {
+      setScore((prevScore) => prevScore + 1);
+      fetchRandomQuestion();
+    }
   };
 
   return (
     <div>
       <h1>Quiz Page</h1>
+      <p>Score: {score}</p>
       {question && <QuizCard question={question} handleOptionClick={handleOptionClick} />}
     </div>
   );

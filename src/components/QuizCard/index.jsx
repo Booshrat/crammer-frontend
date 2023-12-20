@@ -34,7 +34,7 @@ const QuizCard = ({ question, handleOptionClick }) => {
       </div>
       <div className="quiz-card-content">
         <ul className="answer-options">
-          {options.map((option, index) => (
+          {options.sort((a, b) => 0.5 - Math.random()).map((option, index) => (
             <AnswerOption
               key={index}
               option={option}

@@ -4,3 +4,4 @@ export { default as Homepage } from './Homepage';
 export { default as Welcome } from './Welcome';
 export { default as QuizPage } from './QuizPage';
 export { default as FlashCard } from './Flashcard';
+export { default as Leaderboard } from './Leaderboard';

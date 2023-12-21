@@ -8,11 +8,12 @@ function App() {
   return (
     <main>
       <Routes>
-        <Route path="/" element={<Components.PageWrapper />}>
+        <Route path="/" element={<Components.PageWrapper/>}>
           <Route index element={<Pages.Homepage />} />
           <Route path='/login' element={<Pages.Login />} />
           <Route path='/register' element={<Pages.Register />} />
           <Route path='/flashcard' element={<Pages.FlashCard />} />
+          <Route path='/Leaderboard' element={<Pages.Leaderboard />} />
           <Route path= '/quiz' element={<Pages.QuizPage />} />
           <Route path='/welcome' element={<Pages.Welcome />} />
           <Route path="/quiz" element={<Pages.QuizPage />} />

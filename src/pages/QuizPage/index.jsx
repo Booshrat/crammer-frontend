@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import QuizCard from '../../components/QuizCard';
+import axios from 'axios';
 
 const QuizPage = () => {
   const [question, setQuestion] = useState(null);
@@ -40,12 +41,37 @@ const QuizPage = () => {
     return null;
   };
 
+  const updateDbScore = async () => {
+    const storedToken = localStorage.getItem('token')
+    let username = ''
+    if (storedToken) {
+      const tokenParts = storedToken.split(' ')[1].split('.');
+      if (tokenParts.length === 3) {
+          const payload = tokenParts[1];
+          const decodedPayload = atob(payload); // Base64 decode
+          const payloadObj = JSON.parse(decodedPayload);
+          username = payloadObj.username;
+      }
+  }
+    const obj = {
+      username: username,
+      score: 1
+    }
+    try {
+      await axios.patch('http://127.0.0.1:3000/user/update', obj)
+    } catch (error) {
+      console.error('Error fetching flashcards:', error)
+    }
+
+  }
+
   const handleOptionClick = (selectedOption) => {
     // Check if the selected option is correct
     const isCorrect = question.correctAnswer === selectedOption;
 
     // If the selected option is correct, update the score and fetch a new question
     if (isCorrect) {
+      updateDbScore()
       setScore((prevScore) => prevScore + 1);
       fetchRandomQuestion();
     } else {

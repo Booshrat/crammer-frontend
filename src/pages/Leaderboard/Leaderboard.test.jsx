@@ -1,18 +1,43 @@
-import { default as Leaderboard } from '.';
-import { screen, render } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { describe, it, expect, beforeEach, afterEach, vi} from 'vitest';
+import { screen, render, cleanup, fireEvent } from '@testing-library/react';
 
-describe('Leaderboard', () => {
+import * as matchers from '@testing-library/jest-dom/matchers';
+expect.extend(matchers);
 
-beforeEach(() => {
-    render(<Leaderboard/>, { wrapper: MemoryRouter });
-})
-
-test('it renders heading', ()=> {
-    const paragraph = screen.getByRole('heading');
-    expect(paragraph.textContent).toContain('Leaderboard')
-})
+import Leaderboard from '.';
 
 
+describe('Leaderboard Page', () => {
+    beforeEach(() => {
+        render (
+            
+            <BrowserRouter>
+                <Leaderboard />
+            </BrowserRouter>
+            
+        );
+    });
 
-})
+    afterEach(() => {
+        cleanup();
+    });
+
+    it('displays a heading with appropriate text', () => {
+        const heading = screen.getByRole("heading");
+        expect(heading).toBeInTheDocument();
+        expect(heading.textContent).toBe("Leaderboard");
+    });
+    it('displays a loading message while data is being fetched', () => {
+        render(<Leaderboard />);
+        const loadingMessages = screen.queryAllByText("Loading data ...");
+        expect(loadingMessages.length).toBeGreaterThan(0);
+    
+        loadingMessages.forEach((loadingMessage) => {
+            expect(loadingMessage.textContent).toBe("Loading data ...");
+        });
+    });
+   
+
+});

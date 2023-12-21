@@ -5,15 +5,17 @@ import { screen, render, cleanup, fireEvent } from '@testing-library/react';
 
 import * as matchers from '@testing-library/jest-dom/matchers';
 expect.extend(matchers);
-
+import { UserProvider } from '../../contexts';
 import Register from '.';
 
 describe('Register Page', () => {
     beforeEach(() => {
         render (
+            <UserProvider>
             <BrowserRouter>
                 <Register />
             </BrowserRouter>
+            </UserProvider>
         );
     });
 

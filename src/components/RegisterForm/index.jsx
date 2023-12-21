@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginFunction, registerFunction } from "../../actions";
-
+import { useUser } from "../../contexts";
 function RegisterForm() {
+    const { setUser } = useUser(); 
 
     const goTo = useNavigate();
 
@@ -15,7 +16,9 @@ function RegisterForm() {
         setErrorMessage('')
         await registerFunction(e);
         await loginFunction(e);
-        if(localStorage.length){goTo('/flashcard')}
+        if(localStorage.length){
+            setUser(localStorage.getItem("token"))
+            goTo('/flashcard')}
         else { setErrorMessage('User already exists!') }        
     }
 

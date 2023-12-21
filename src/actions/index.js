@@ -37,7 +37,7 @@ export const registerFunction = async (e) => {
 
 export const getLeaderboardData = async () => {
     try{
-        const response = await axios.get('http://127.0.0.1:3000/user')
+        const response = await axios.get('https://reddy-34-xnzz.onrender.com/user')
         const data = response.data;
         const sort= data.sort((a, b) => {
             return b.score - a.score;

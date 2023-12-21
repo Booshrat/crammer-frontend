@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginFunction } from "../../actions";
+import { useUser } from "../../contexts";
 
 function LoginForm() {
+    const { setUser } = useUser();
 
     const goTo = useNavigate();
 
@@ -13,8 +15,11 @@ function LoginForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setErrorMessage('')
+        setUser(localStorage.getItem('token'))
         await loginFunction(e);
-        if (localStorage.length) { goTo('/flashcard') }
+        if (localStorage.length) { 
+            setUser(localStorage.getItem('token'))
+            goTo('/flashcard') }
         else { setErrorMessage('Incorrect Username or Password!') }
     }
 

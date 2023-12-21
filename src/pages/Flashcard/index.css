@@ -1,9 +1,7 @@
 .flashcard-page {
-  /* background-color: #f3c380; */
   margin-top: 4rem;
   padding: 2rem;
   background-image: url("../../assets/45551.png");
-  background-color: cadetblue;
 }
 
 .flashcard-page > h1 {
@@ -73,8 +71,9 @@
 }
 
 .flip-card-front {
-  background-color: #fff;
+  background-color: #EEEFF2;
   color: black;
+   /* background-image: url("../../assets/45551.png"); */
 }
 
 .flip-card-back {

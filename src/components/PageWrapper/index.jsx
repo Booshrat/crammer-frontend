@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
 const PageWrapper = () => {
-
-    useEffect(() => {
-        const user = localStorage.getItem('token')
-    }, [user])
+    const [user, setUser] = useState(localStorage.getItem('token'));
 
     return <>
         <header id="crammer-header">

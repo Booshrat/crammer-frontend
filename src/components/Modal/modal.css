@@ -35,17 +35,17 @@ body.active-modal {
     min-width: 300px;
 }
 
+.modal-form {
+  text-align: left;
+  margin: auto;
+}
+
 .close-modal {
     position: absolute;
     top: 10px;
     right: 10px;
     padding: 5px 7px;
 }
-
-
-
- 
- 
 
 label {
     color: #363d55;
@@ -61,6 +61,13 @@ label {
     border-radius: 0.3em;
     resize: none;
   }
+  .modal-input {
+    width: 100%;
+    border-radius: 15px;
+    border: 0.4px solid darkslategrey;
+    margin-bottom: 25px;
+    padding: 10px;
+  }
   textarea:not(:last-child) {
     margin-bottom: 1.2em;
   }
@@ -69,13 +76,20 @@ label {
   }
   #save-btn {
     font-size: 1em;
-    background-color: #587ef4;
+    background-color: #5A9499;
     color: #ffffff;
     padding: 0.6em 0;
     border-radius: 0.3em;
     font-weight: 600;
     width: 100%; 
     text-align: center; 
+  }
+
+  #save-btn:hover {
+    background-color: #607683; 
+    transform: translateY(-1px); 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);  
+    cursor: pointer;
   }
 
  
@@ -89,8 +103,8 @@ label {
   }
 
   .btn-modal {
-    padding: 10px 20px;
-    background-color: #4CAF50; 
+    padding: .7rem 1rem;
+    background-color: #5A9499; 
     color: white; 
     border: none; 
     border-radius: 5px; 
@@ -103,7 +117,7 @@ label {
 }
 
 .btn-modal:hover, .btn-modal:focus {
-    background-color: #45a049; 
+    background-color: #607683; 
     transform: translateY(-2px); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
 }

@@ -23,7 +23,7 @@ const FlashCard = () => {
         const fetchFlashcards = async () => {
             const token = storedToken.split(' ')[1]
             try {
-                const response = await axios.get('http://localhost:3000/flashcard', {
+                const response = await axios.get('https://reddy-34-xnzz.onrender.com/flashcard', {
                     headers: { Authorization: `${token}`}
                 });
                 setFlashcards(response.data);
@@ -70,7 +70,7 @@ const FlashCard = () => {
     const deleteFlashcard = async (flashcardId) => {
         const token = storedToken.split(' ')[1]
         try {
-            await axios.delete(`http://localhost:3000/flashcard/${flashcardId}`, {
+            await axios.delete(`https://reddy-34-xnzz.onrender.com/flashcard/${flashcardId}`, {
                 headers: { Authorization: `${token}` }
             });
 
@@ -94,7 +94,7 @@ const FlashCard = () => {
 
     return (
         <>
-            <h1>Username: {username}</h1>
+            <h1>{username}'s Flashcards</h1>
             <div className="flashcard-container">
                 {flashcards.length > 0 ? (
                     <>
@@ -114,10 +114,10 @@ const FlashCard = () => {
                             </div>
                         </div>
                         <div className="flashcard-controls">
-                            <button onClick={goPrev} disabled={currentIndex === 0}>⬅️ Prev</button>
-                            <button onClick={goNext} disabled={currentIndex === flashcards.length - 1}>Next ➡️</button>
-                            <button onClick={shuffleFlashcards}>Shuffle 🔀</button>
-                            <button onClick={() => deleteFlashcard(currentCard._id)}>Delete ❌</button>
+                            <button onClick={goPrev} disabled={currentIndex === 0}><i class="fa-solid fa-arrow-left"></i> Prev</button>
+                            <button onClick={goNext} disabled={currentIndex === flashcards.length - 1}>Next <i class="fa-solid fa-arrow-right"></i></button>
+                            <button onClick={shuffleFlashcards}>Shuffle <i class="fa-solid fa-shuffle"></i></button>
+                            <button onClick={() => deleteFlashcard(currentCard._id)}>Delete <i class="fa-solid fa-xmark"></i></button>
                         </div>
                     </>
                 ) : (

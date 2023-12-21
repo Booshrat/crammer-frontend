@@ -19,14 +19,14 @@ function Modal({setFlashcards}) {
     const storedToken = localStorage.getItem('token');
     const token = storedToken ? storedToken.split(' ')[1] : '';
 
-    const response = await axios.post('http://localhost:3000/flashcard', { question, answer }, {
+    const response = await axios.post('https://reddy-34-xnzz.onrender.com/flashcard', { question, answer }, {
         headers: {
           Authorization: `${token}`
         }
       });
 
       try {
-          const response = await axios.get('http://localhost:3000/flashcard', {
+          const response = await axios.get('https://reddy-34-xnzz.onrender.com/flashcard', {
               headers: { Authorization: `${token}`}
           });
           setFlashcards(response.data);
@@ -62,19 +62,22 @@ function Modal({setFlashcards}) {
             )}
             <h2 style={{ textAlign: "center" }}>Add Flashcard</h2>
             <p>
-              <form onSubmit={handleSave}>
+              <form onSubmit={handleSave} className="modal-form">
                 <label htmlFor="question">Question:</label>
+                <br/>
                 <textarea
-                  className="input"
+                  className="modal-input"
                   id="question"
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
                   placeholder="Type the question here.."
                   rows="2"
                 ></textarea>
+                <br />
                 <label htmlFor="answer">Answer:</label>
+                <br/>
                 <textarea
-                  className="input"
+                  className="modal-input"
                   id="answer"
                   value={answer}
                   onChange={(e) => setAnswer(e.target.value)}

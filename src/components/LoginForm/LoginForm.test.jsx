@@ -6,15 +6,17 @@ import * as matchers from "@testing-library/jest-dom/matchers";
 expect.extend(matchers);
 
 import LoginForm from "./index";
-
+import { UserProvider } from "../../contexts";
 import { BrowserRouter as Router } from 'react-router-dom';
 
 describe("Login Form component", () => {
     beforeEach(() => {
       render(
+        <UserProvider>
         <Router>
           <LoginForm />
         </Router>
+        </UserProvider>
       );
     });
   

@@ -6,15 +6,18 @@ import * as matchers from "@testing-library/jest-dom/matchers";
 expect.extend(matchers);
 
 import PageWrapper from "./index";
+import { UserProvider } from "../../contexts";
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
 describe("PageWrapper component", () => {
     beforeEach(() => {
       render(
+        <UserProvider>
         <Router>
           <PageWrapper />
         </Router>
+        </UserProvider>
       );
     });
   
@@ -22,10 +25,10 @@ describe("PageWrapper component", () => {
       cleanup();
     });
   
-    it("displays the nav bar with 6 links and one image", () => {
+    it("displays the nav bar with 3 links and one image", () => {
       const nav = screen.getByRole("navigation");
       expect(nav).toBeInTheDocument;
-      expect(nav.childNodes.length).toBe(7);
+      expect(nav.childNodes.length).toBe(4);
     });
 
     it("displays a footer at the bottom of each page", () =>{

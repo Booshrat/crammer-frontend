@@ -47,6 +47,8 @@ describe('Flashcard Page', () => {
     mockFlashcards.forEach(async (flashcard) => {
       const foundElements = await screen.findAllByText(flashcard.question);
       expect(foundElements.length).toBeGreaterThan(0);
+      const buttons = await screen.findAllByRole("button")
+      expect(buttons.length).toEqual(4)
      
     })
   });

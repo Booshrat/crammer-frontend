@@ -11,7 +11,7 @@ const Login = () => {
     <section id="register-page">
     <h1>Login</h1>
 
-    <BackButton />
+    {/* <BackButton /> */}
 
     <LoginForm />
     

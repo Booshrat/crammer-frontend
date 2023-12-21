@@ -6,7 +6,7 @@ const PageWrapper = () => {
     <>
       <header id="crammer-header">
         <nav id="crammer-navbar">
-          <img src="src/assets/crammer.png" id="logo" />
+          <img src="src/assets/bg.png" id="logo" />
           <NavLink to="/" className="nav-link">
             Home
           </NavLink>
@@ -29,45 +29,49 @@ const PageWrapper = () => {
       </header>
       <Outlet />
       <footer id="crammer-footer">
-        <div className="icon-container">
+        <div className="footer-link">
+          <div className="footer-elements">
+            <a href="">
+              <img
+                className="footer-icon"
+                src="src/assets/instagram.png"
+                alt="instagram-icon"
+              />
+            </a>
+            <a>Contact Us</a>
+          </div>
+          <div className="footer-elements">
           <a href="">
-            <img
-              className="footer-icon"
-              src="src/assets/instagram.png"
-              alt="instagram-icon"
-            />
-          </a>
-          <a href="">
-            <img
+          <img
               className="footer-icon"
               src="src/assets/facebook.png"
               alt="instagram-icon"
             />
-          </a>
+            </a>
+            <a>Privacy</a>
+          </div>
+          <div className="footer-elements">
           <a href="">
             <img
               className="footer-icon"
               src="src/assets/twitter.png"
               alt="instagram-icon"
             />
-          </a>
+            </a>
+            <a>Cookies</a>
+          </div>
+          <div className="footer-elements">
           <a href="">
             <img
               className="footer-icon"
               src="src/assets/youtube.png"
               alt="instagram-icon"
             />
-          </a>
+            </a>
+            <a>Sitemap</a>
+          </div>
         </div>
-        <div className="link-container">
-          <a>Contact Us</a>
-          <a>Privacy</a>
-          <a>Cookies</a>
-          <a>Sitemap</a>
-        </div>
-        <div>
           <p>Copyright 2023 @ Crammer Education</p>
-        </div>
       </footer>
     </>
   );

@@ -1,0 +1,21 @@
+.leaderboard-page {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    height: 100vh;
+    padding: 3rem;
+    background-image: url("../../assets/45551.png");
+}
+
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    margin: 0 auto;
+}

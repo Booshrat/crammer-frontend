@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import QuizCard from '../../components/QuizCard';
 import axios from 'axios';
+import './index.css';
 
 const QuizPage = () => {
   const [question, setQuestion] = useState(null);
@@ -81,8 +82,8 @@ const QuizPage = () => {
   };
 
   return (
-    <div>
-      <h1>Quiz Page</h1>
+    <div className='quiz-page'>
+      <h1>Educational Quiz</h1>
       <p>Score: {score}</p>
       {question && <QuizCard question={question} handleOptionClick={handleOptionClick} score={score} />}
     </div>

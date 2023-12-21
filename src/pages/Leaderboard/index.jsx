@@ -35,10 +35,10 @@ const Leaderboard = () => {
         })
 
     return(
-        <section>
+        <div className='leaderboard-page'>
             <h1>Leaderboard</h1>
             {!data ? <p>Loading data ...</p> :
-            <>
+            <div className='leaderboard-container'>
             <table id="leaderboard">
 
                <tbody>
@@ -66,8 +66,8 @@ const Leaderboard = () => {
                     ))}
                 </tbody>
             </table>
-            </>}
-        </section>
+            </div>}
+        </div>
     )
 }
 

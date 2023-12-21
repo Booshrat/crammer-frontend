@@ -51,21 +51,39 @@ describe("Modal component", () => {
         expect(modal).not.toBeInTheDocument();
     })
 
-    it("displays a success message after adding a flashcard", async ()=>{
+    /*it("allows typing into the question and answer text areas", () => {
         const create = screen.getByRole("button");
         fireEvent.click(create);
+      
+        const questionInput = screen.getByLabelText("Question:");
+        const answerInput = screen.getByLabelText("Answer:");
+      
+        userEvent.type(questionInput, "What is your name?");
+        userEvent.type(answerInput, "My name is Test User");
+      
+        expect(questionInput).toHaveValue("What is your name?");
+        expect(answerInput).toHaveValue("My name is Test User");
+    });*/ 
 
-        vi.spyOn(axios, "post").mockResolvedValueOnce({})
-
-        const saveFlashcard = screen.getByText("Save")
-        fireEvent.click(saveFlashcard)
-
-        await waitFor(()=>{
-            const addedMessage = screen.getByText("Flashcard added")
-            expect(addedMessage).toBeInTheDocument();
-        })
-
+      it("calls handleSave on form submission", async () => {
+        const create = screen.getByRole("button");
+        fireEvent.click(create);
+      
+        vi.spyOn(axios, "post").mockResolvedValueOnce({});
+      
+        const saveFlashcard = screen.getByText("Save");
+        fireEvent.click(saveFlashcard);
+      
+        await waitFor(() => {
+          expect(axios.post).toHaveBeenCalledWith(
+            'https://reddy-34-xnzz.onrender.com/flashcard',
+            { question: "", answer: "" },
+            { headers: { Authorization: "" } }
+          );
+        });
        
+
+      })
 
     })
 
@@ -74,4 +92,4 @@ describe("Modal component", () => {
 
 
 
-  });
+

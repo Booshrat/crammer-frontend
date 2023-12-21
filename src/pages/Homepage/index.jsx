@@ -7,7 +7,7 @@ const Homepage = () => {
 
     return (
         <div className="home-container">
-            <img className="home-image" src="src/assets/home-image.png" alt="home-image" />
+            <img className="home-image" src="src/assets/home-image2.png" alt="home-image" />
             <div className="overlay">
                 <div className="welcome-text">
                     {/* <h1>Welcome to the Crammer App - Your Ultimate Study Companion!</h1>

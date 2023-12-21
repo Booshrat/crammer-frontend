@@ -137,6 +137,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  background-image: url("../src/assets/45551.png");
 }
 
 
@@ -151,6 +152,7 @@ h1 {
   padding: 50px;
   margin-top: 35px;
   text-align: left;
+  background-color: #EEEFF2;
 }
 
 .form-wrapper {
@@ -224,6 +226,7 @@ h1 {
 
 .footer-icon {
   width: 1.2rem;
+  margin-bottom: .5rem;
 }
 
 .footer-link {

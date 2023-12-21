@@ -13,6 +13,10 @@
   background-color: aliceblue;
   width: 10rem;
   padding: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #1e2c35;
+  border-radius: 1rem;
 }
 
 /* .quiz-page-container {

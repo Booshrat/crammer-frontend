@@ -78,6 +78,9 @@ const PageWrapper = () => {
         <div>
           <p>Copyright 2023 @ Crammer Education</p>
         </div>
+        </footer> 
+        </>
+    )
 };
 
 export default PageWrapper;

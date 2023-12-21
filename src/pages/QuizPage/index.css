@@ -1,4 +1,21 @@
-.quiz-page-container {
+.quiz-page {
+  margin-top: 4rem;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../../assets/45551.png"); 
+}
+
+.quiz-page > p {
+  font-size: 1.2rem;
+  background-color: aliceblue;
+  width: 10rem;
+  padding: 1.1rem;
+}
+
+/* .quiz-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,4 +40,4 @@
     text-align: center;
     color: #888;
     margin-top: 20px;
-  }
+  } */

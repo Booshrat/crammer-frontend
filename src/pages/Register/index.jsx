@@ -11,8 +11,6 @@ const Register = () =>  {
     <section id="register-page">
     <h1>Register</h1>
 
-    
-
     <RegisterForm />
     
     </section>

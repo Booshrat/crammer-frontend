@@ -93,7 +93,7 @@ const FlashCard = () => {
     const currentCard = flashcards[currentIndex];
 
     return (
-        <>
+        <div className='flashcard-page'>
             <h1>{username}'s Flashcards</h1>
             <div className="flashcard-container">
                 {flashcards.length > 0 ? (
@@ -103,11 +103,11 @@ const FlashCard = () => {
                                 {currentCard && (
                                     <>
                                         <div className="flip-card-front">
-                                            <h1>{currentCard.question}</h1>
+                                            <h2>{currentCard.question}</h2>
                                             <span><i>hover to flip card</i></span>
                                         </div>
                                         <div className="flip-card-back">
-                                            <h1>{currentCard.answer}</h1>
+                                            <h2>{currentCard.answer}</h2>
                                         </div>
                                     </>
                                 )}
@@ -126,7 +126,7 @@ const FlashCard = () => {
                 {showDeleteSuccess && <div className="delete-success-message">Successfully deleted</div>}
             </div>
             <Modal setFlashcards={setFlashcards}/>
-        </>
+        </div>
     );
     
 };

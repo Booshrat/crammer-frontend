@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { BackButton, LoginForm } from '../../components';
+import { LoginForm } from '../../components';
+
 
 const Login = () => {
 
@@ -11,7 +12,6 @@ const Login = () => {
     <section id="register-page">
     <h1>Login</h1>
 
-    <BackButton />
 
     <LoginForm />
     

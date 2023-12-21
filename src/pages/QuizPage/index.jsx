@@ -58,7 +58,7 @@ const QuizPage = () => {
       score: 1
     }
     try {
-      await axios.patch('http://127.0.0.1:3000/user/update', obj)
+      await axios.patch('https://reddy-34-xnzz.onrender.com/user/update', obj)
     } catch (error) {
       console.error('Error fetching flashcards:', error)
     }

@@ -6,15 +6,18 @@ import * as matchers from "@testing-library/jest-dom/matchers";
 expect.extend(matchers);
 
 import RegisterForm from "./index";
+import { UserProvider } from "../../contexts";
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
 describe("Register Form component", () => {
     beforeEach(() => {
       render(
+        <UserProvider>
         <Router>
           <RegisterForm />
         </Router>
+        </UserProvider>
       );
     });
   
@@ -24,7 +27,7 @@ describe("Register Form component", () => {
   
     it("displays a submit button", () => {
       const submit = screen.getByRole("submit");
-      expect(submit).toBeInTheDocument;
+      expect(submit).toBeInTheDocument();
       expect(submit.value).toBe("REGISTER")
     });
 

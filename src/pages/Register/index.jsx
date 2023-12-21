@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { BackButton, RegisterForm } from '../../components';
+import { RegisterForm } from '../../components';
 
 const Register = () =>  {
     
@@ -11,7 +11,7 @@ const Register = () =>  {
     <section id="register-page">
     <h1>Register</h1>
 
-    <BackButton />
+    
 
     <RegisterForm />
     

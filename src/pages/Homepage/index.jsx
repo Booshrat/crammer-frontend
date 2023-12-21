@@ -12,7 +12,7 @@ const Homepage = () => {
                 <div className="overlay">
                     <div className="welcome-text">
                         <h1>Welcome to the Crammer App - Your Ultimate Study Companion!</h1>
-                        <p> Unleash the power of efficient learning with our interactive flashcards and challenging quizzes. Whether you're gearing up for exams or simply eager to expand your knowledge, we've got you covered. Let the journey to academic excellence begin! Get ready to supercharge your learning experience and achieve your goals. Let's make every study session count!</p>
+                        <p>Unleash the power of efficient learning with our interactive flashcards and challenging quizzes. Whether you're gearing up for exams or simply eager to expand your knowledge, we've got you covered!</p>
                     </div>
                     <div className='btn-container'>
                         <button role="login-button" className="login-btn" onClick={() => { goTo('/login') }}>Login</button>

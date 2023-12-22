@@ -17,8 +17,8 @@ We used the MERN stack to build this app. The purpose of our app is to boost pro
 - create a file called .env
 - Copy and paste this into the .env 
 ```
-SECRET = 89272C7FB8E681E84EA9B7AA7945A3DFD0D45ACA421FC485CE7B0D0912A5D838
-MONGODB_URI='mongodb://127.0.0.1:27017'
+SECRET=89272C7FB8E681E84EA9B7AA7945A3DFD0D45ACA421FC485CE7B0D0912A5D838
+MONGODB_URI=<your MongoDB Atlas connection string>
 ```
 - run `npm i` or `npm install`
 - run `npm run dev` and app runs on (http://127.0.0.1:3000)
